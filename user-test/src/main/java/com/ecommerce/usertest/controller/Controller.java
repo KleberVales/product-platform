@@ -21,11 +21,10 @@ public class Controller {
     @PostMapping("/login")
     public LoginResponseDTO login(@RequestBody LoginRequestDTO dto) {
 
-        service.findByEmail(dto);
-        LoginResponseDTO loginResponseDTO = new LoginResponseDTO();
 
-        loginResponseDTO.setPasswordHash(dto.getPasswordHash());
 
-        return loginResponseDTO;
+
+
+        return service.findByEmail(dto);
     }
 }

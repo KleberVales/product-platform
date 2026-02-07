@@ -21,6 +21,9 @@ public class User {
 
     private String passwordHash;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "user_role")
     private Role role;
+
 
 }
