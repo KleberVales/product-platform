@@ -4,6 +4,7 @@ import com.ecommerce.authtest.client.UserClient;
 import com.ecommerce.authtest.dto.LoginRequestDTO;
 import com.ecommerce.authtest.dto.LoginResponseDTO;
 import com.ecommerce.authtest.service.AuthService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,8 +23,11 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponseDTO> login(
-            @RequestBody LoginRequestDTO dto
+            @RequestBody LoginRequestDTO dto, HttpServletRequest request
     ) {
+
+        System.out.println("CHEGOU NO CONTROLLER: " + request.getRequestURI());
+
         return ResponseEntity.ok(service.login(dto));
     }
 }
