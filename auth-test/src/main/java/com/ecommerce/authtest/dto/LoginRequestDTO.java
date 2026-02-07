@@ -1,6 +1,6 @@
 package com.ecommerce.authtest.dto;
 
-public class UserRequestDTO {
+public class LoginRequestDTO {
 
     private String email;
     private String password;

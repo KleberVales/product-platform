@@ -5,6 +5,7 @@ public class LoginResponseDTO {
     private String passwordHash;
 
     public String getPasswordHash() {
+
         return passwordHash;
     }
 

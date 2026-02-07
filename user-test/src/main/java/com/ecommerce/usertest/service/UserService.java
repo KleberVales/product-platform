@@ -2,6 +2,7 @@ package com.ecommerce.usertest.service;
 
 import com.ecommerce.usertest.dto.LoginRequestDTO;
 import com.ecommerce.usertest.dto.LoginResponseDTO;
+import com.ecommerce.usertest.dto.UserDTO;
 import com.ecommerce.usertest.entity.User;
 import com.ecommerce.usertest.repository.UserRepository;
 import org.springframework.stereotype.Service;
@@ -16,17 +17,21 @@ public class UserService {
     }
 
 
-    public LoginResponseDTO findByEmail(LoginRequestDTO dto) {
+    public UserDTO findByEmail(String email) {
 
-        User user = repo.findByEmail(dto.getEmail())
+        User user = repo.findByEmail(email)
                 .orElseThrow(() ->
-                        new RuntimeException("Usuário não encontrado com email: " + dto.getEmail())
+                        new RuntimeException("Usuário não encontrado com email: " + email)
                 );
 
-        LoginResponseDTO loginResponseDTO = new LoginResponseDTO();
-        loginResponseDTO.setPasswordHash(user.getPasswordHash());
+        UserDTO userDTO = new UserDTO();
+        userDTO.setUsername(user.getUsername());
+        userDTO.setPasswordHash(user.getPasswordHash());
+        userDTO.setEmail(user.getEmail());
+        userDTO.setRole(user.getRole());
 
-        return loginResponseDTO;
+        return userDTO;
+
     }
 
 

@@ -2,14 +2,12 @@ package com.ecommerce.usertest.controller;
 
 import com.ecommerce.usertest.dto.LoginRequestDTO;
 import com.ecommerce.usertest.dto.LoginResponseDTO;
+import com.ecommerce.usertest.dto.UserDTO;
 import com.ecommerce.usertest.service.UserService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/users")
 public class Controller {
 
     private UserService service;
@@ -18,13 +16,14 @@ public class Controller {
         this.service = service;
     }
 
-    @PostMapping("/login")
-    public LoginResponseDTO login(@RequestBody LoginRequestDTO dto) {
+    @GetMapping("/email/{email}")
+    public UserDTO findByEmail(@PathVariable String email) {
 
+        UserDTO userDTO = service.findByEmail(email);
 
+        return userDTO;
 
-
-
-        return service.findByEmail(dto);
     }
+
+
 }
