@@ -34,6 +34,13 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.18.30'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
 
+    // Spring MVC
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // PostgreSQL
+    runtimeOnly 'org.postgresql:postgresql:42.7.3'
+
+
 
 }
 
