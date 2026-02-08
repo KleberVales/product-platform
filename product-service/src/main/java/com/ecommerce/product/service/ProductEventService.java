@@ -14,7 +14,9 @@ public class ProductEventService {
     }
 
     public void publishCreated(Product product) {
+
         publisher.publishCreated(product);
+
     }
 
     public void publishUpdated(Product product) {

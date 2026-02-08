@@ -22,9 +22,11 @@ public class ProductService {
     }
 
     public ProductResponse create(CreateProductRequest request) {
+
         Product product = ProductMapper.toEntity(request);
         repository.save(product);
         eventService.publishCreated(product);
+        
         return ProductMapper.toResponse(product);
     }
 

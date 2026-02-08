@@ -16,8 +16,10 @@ public class ProductEventPublisher {
     }
 
     public void publishCreated(Product product) {
+
         kafkaTemplate.send(ProductTopics.PRODUCT_CREATED,
                 new ProductCreatedEvent(product));
+
     }
 
     public void publishUpdated(Product product) {
