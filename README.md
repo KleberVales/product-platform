@@ -27,4 +27,5 @@ Cloud | DevOps | Docker | Kubernetes | Kafka | Git/Github | Generative AI | Scru
 🏆 **Oracle Certified Associate – Java SE 7 Programmer**
 🏆 **Microsoft Technology Associate – Software Development Fundamentals**
 🏆 **Scrum Fundamentals Certified (SFC™)** 
+🏆 **Oracle Cloud Infrastructure 2025 – DevOps Professional**
 
