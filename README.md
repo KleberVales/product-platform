@@ -11,6 +11,7 @@
 
 - Serviço de login
 - Operações CRUD de usuários
+- Serviço de registro de produtos com PostgreSQL e Kafka
 
 
 ---
