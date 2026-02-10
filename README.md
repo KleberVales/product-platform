@@ -48,6 +48,7 @@ The project uses the following main technologies:
 - 🔹 **PostgreSQL**
 - 🔹 **Apache Kafka**
 - 🔹 **Docker**
+- 🔹 **Gradle**
 
 
 
