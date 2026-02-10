@@ -21,6 +21,9 @@ This repository contains microservices that implement separate functionalities i
 - Microservices organized by domain
 - PostgreSQL as a database
 - Kafka for communication between services
+- Architecture designed for scalability and maintenance.
+
+---
 
 
 <img width="575" height="746" alt="Captura de tela 2026-02-10 100500" src="https://github.com/user-attachments/assets/7c537234-74b5-4075-9514-01177282fb14" />
