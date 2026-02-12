@@ -13,7 +13,7 @@ A microservices platform built in Java and Spring Boot, organized with various s
 
 ---
 
-## 🚀 Overview
+## Overview
 
 This repository contains microservices that implement separate functionalities independently, using:
 
