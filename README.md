@@ -25,7 +25,7 @@ This repository contains microservices that implement separate functionalities i
 
 ---
 
-## 🧩 Services and Features
+## Services and Features
 
 | Serviço | Descrição |
 |---------|-----------|
