@@ -18,7 +18,6 @@ public class CartMapper {
                 cart.getItems().stream()
                         .map(i -> new CartItemDTO(
                                 i.getProductId(),
-                                i.getProductName(),
                                 i.getPrice(),
                                 i.getQuantity()
                         ))

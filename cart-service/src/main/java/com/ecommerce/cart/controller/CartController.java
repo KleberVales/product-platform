@@ -5,6 +5,7 @@ import com.ecommerce.cart.dto.AddItemRequestDTO;
 import com.ecommerce.cart.dto.CartResponseDTO;
 import com.ecommerce.cart.mapper.CartMapper;
 import com.ecommerce.cart.service.CartService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -22,9 +23,13 @@ public class CartController {
     }
 
     @GetMapping("/{userId}")
-    public Object getCart(@PathVariable UUID userId) {
+    public ResponseEntity<CartResponseDTO> getCart(@PathVariable UUID userId) {
+
         Cart cart = service.getCartByUser(userId);
-        return mapper.toDTO(cart);
+
+        CartResponseDTO response = mapper.toDTO(cart);
+
+        return ResponseEntity.ok(response);
     }
 
     @PostMapping("/{userId}/items")

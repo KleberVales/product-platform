@@ -26,8 +26,6 @@ public class AuthController {
             @RequestBody LoginRequestDTO dto, HttpServletRequest request
     ) {
 
-        System.out.println("CHEGOU NO CONTROLLER: " + request.getRequestURI());
-
         return ResponseEntity.ok(service.login(dto));
     }
 }

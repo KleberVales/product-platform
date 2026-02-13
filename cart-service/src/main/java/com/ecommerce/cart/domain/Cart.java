@@ -3,6 +3,7 @@ package com.ecommerce.cart.domain;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.*;
 
 @Getter
@@ -35,7 +36,7 @@ public class Cart {
         this.status = status;
     }
 
-    public void addItem(UUID productId, int quantity) {
+    public void addItem(UUID productId, int quantity, BigDecimal price) {
 
         CartItem item = items.stream()
                 .filter(i -> i.getProductId().equals(productId))
@@ -43,7 +44,7 @@ public class Cart {
                 .orElse(null);
 
         if (item == null) {
-            items.add(new CartItem(productId, quantity));
+            items.add(new CartItem(productId, quantity, price));
         } else {
             item.incrementQuantity(quantity);
         }

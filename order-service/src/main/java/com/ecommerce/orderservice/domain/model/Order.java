@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Table(name = "orders")
@@ -17,7 +18,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long userId;
+    private UUID userId;
 
     private BigDecimal total;
 
@@ -29,8 +30,14 @@ public class Order {
     private List<OrderItem> items;
 
     public void calculateTotal() {
-        this.total = items.stream()
-                .map(OrderItem::getSubtotal)
-                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        BigDecimal total = BigDecimal.ZERO;
+
+        for (OrderItem item : items) {
+            total = total.add(item.getSubtotal());
+        }
+
+        this.total = total;
     }
+
 }

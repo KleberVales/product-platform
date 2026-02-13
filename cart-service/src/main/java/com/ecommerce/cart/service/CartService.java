@@ -20,18 +20,21 @@ public class CartService {
 
     public Cart getCartByUser(UUID userId) {
 
-        CartStatus cartStatus = CartStatus.ACTIVE;
-
         return repository.findByUserId(userId)
-                .orElseGet(() -> repository.save(new Cart(userId, cartStatus)));
+                .orElseGet(() -> {
+                    Cart newCart = new Cart(userId, CartStatus.ACTIVE);
+                    return repository.save(newCart);
+                });
     }
+
+
 
     public Cart addItem(UUID userId, AddItemRequestDTO dto) {
 
         Cart cart = repository.findByUserId(userId)
                 .orElseGet(() -> repository.save(new Cart(userId)));
 
-        cart.addItem(dto.getProductId(), dto.getQuantity());
+        cart.addItem(dto.getProductId(), dto.getQuantity(), dto.getPrice());
 
         return repository.save(cart);
     }

@@ -18,7 +18,6 @@ public class CartItem {
     private UUID id;
 
     private UUID productId;
-    private String productName;
     private BigDecimal price;
     private int quantity;
 
@@ -30,6 +29,12 @@ public class CartItem {
     public CartItem(UUID productId, int quantity) {
         this.productId = productId;
         this.quantity = quantity;
+    }
+
+    public CartItem(UUID productId, int quantity, BigDecimal price) {
+        this.productId = productId;
+        this.quantity = quantity;
+        this.price = price;
     }
 
     /** Regra de negócio */

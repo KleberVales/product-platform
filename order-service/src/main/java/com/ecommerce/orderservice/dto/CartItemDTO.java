@@ -1,4 +1,4 @@
-package com.ecommerce.cart.dto;
+package com.ecommerce.orderservice.dto;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,12 +8,11 @@ import java.util.UUID;
 
 @Getter
 @Setter
-public class AddItemRequestDTO {
+public class CartItemDTO {
 
     private UUID productId;
-    private Integer quantity;
     private BigDecimal price;
-
+    private Integer quantity;
 
     // getters e setters
 }

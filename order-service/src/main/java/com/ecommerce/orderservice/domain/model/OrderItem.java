@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -18,9 +19,16 @@ public class OrderItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long productId;
+    private UUID productId;
     private Integer quantity;
     private BigDecimal price;
+
+    public OrderItem(UUID productId, BigDecimal price, Integer quantity) {
+        this.productId = productId;
+        this.price = price;
+        this.quantity = quantity;
+
+    }
 
     public BigDecimal getSubtotal() {
         return price.multiply(BigDecimal.valueOf(quantity));
