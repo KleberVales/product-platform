@@ -1,15 +1,19 @@
 package com.ecommerce.payment.domain.event;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import java.math.BigDecimal;
+import java.util.UUID;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderCreatedEvent {
 
-    private Long orderId;
-    private Long userId;
-    private Double total;
+    private UUID orderId;
+    private UUID userId;
+    private BigDecimal total;
+
 }
 

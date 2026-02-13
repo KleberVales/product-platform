@@ -6,13 +6,15 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
+import java.util.UUID;
+
 @Component
 @RequiredArgsConstructor
 public class PaymentResultProducer {
 
     private final KafkaTemplate<String, Object> kafkaTemplate;
 
-    public void publishPaymentResult(Long orderId, PaymentStatus status) {
+    public void publishPaymentResult(UUID orderId, PaymentStatus status) {
 
         PaymentProcessedEvent event = PaymentProcessedEvent.builder()
                 .orderId(orderId)

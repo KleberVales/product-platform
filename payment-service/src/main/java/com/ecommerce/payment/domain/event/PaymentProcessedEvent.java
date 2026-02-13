@@ -3,6 +3,8 @@ package com.ecommerce.payment.domain.event;
 import com.ecommerce.payment.domain.enums.PaymentStatus;
 import lombok.*;
 
+import java.util.UUID;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -10,7 +12,7 @@ import lombok.*;
 @Builder
 public class PaymentProcessedEvent {
 
-    private Long orderId;
+    private UUID orderId;
     private PaymentStatus status;
 }
 
