@@ -78,7 +78,7 @@ Redes: [LinkedIn](https://www.linkedin.com/in/klebervales) | [GitHub](https://gi
 
 Java & Spring Software Engineer
 
-Cloud | DevOps | Docker | Kubernetes | Kafka | Git/Github | Generative AI | Scrum
+Cloud | DevOps | Microservice | Docker | Kubernetes | Kafka | Git/Github | Generative AI | Scrum
 
 🏆 **Oracle Certified Associate – Java SE 7 Programmer**  
 🏆 **Microsoft Technology Associate – Software Development Fundamentals**  
