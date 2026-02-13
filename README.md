@@ -13,7 +13,7 @@ A microservices platform built in Java and Spring Boot, organized with various s
 
 ---
 
-## 🚀 Overview
+## Overview
 
 This repository contains microservices that implement separate functionalities independently, using:
 
@@ -25,7 +25,7 @@ This repository contains microservices that implement separate functionalities i
 
 ---
 
-## 🧩 Services and Features
+## Services and Features
 
 | Serviço | Descrição |
 |---------|-----------|
@@ -39,7 +39,7 @@ Each service is a standalone Spring Boot project, with its own business logic an
 
 ---
 
-## 🛠 Technologies
+## Technologies
 
 The project uses the following main technologies:
 
@@ -52,7 +52,7 @@ The project uses the following main technologies:
 
 ---
 
-## 🧭 How to Run the Project
+## How to Run the Project
 
 **Clone the repository**
 ```bash
@@ -60,7 +60,7 @@ git clone https://github.com/KleberVales/product-platform.git
 cd product-platform
 ```
 
-
+## Flowchart
 
 <img width="575" height="746" alt="Captura de tela 2026-02-10 100500" src="https://github.com/user-attachments/assets/7c537234-74b5-4075-9514-01177282fb14" />
 
