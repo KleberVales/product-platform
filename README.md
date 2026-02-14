@@ -29,11 +29,12 @@ This repository contains microservices that implement separate functionalities i
 
 | Serviço | Descrição |
 |---------|-----------|
-| `auth-test` | Authentication validation (test) |
+| `auth-service` | Authentication validation (test) |
 | `cart-service` | Shopping cart operations |
 | `order-service` | Order management |
 | `product-service` | CRUD of products |
-| `user-test` | User testing / validations |
+| `user-service` | User testing / validations |
+| `payment-service` |   |
 
 Each service is a standalone Spring Boot project, with its own business logic and configuration.
 
